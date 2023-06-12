@@ -1,7 +1,8 @@
 ///<reference types="cypress"/>
 
 //Seção 7 aula 41 e 42
-describe('Desafio',() => {
+
+describe('Desafio', () => {
 before(() => {
     cy.visit('https://wcaquino.me/cypress/componentes.html')
 })

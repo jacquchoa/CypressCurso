@@ -16,7 +16,7 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
-require('@cypress/xpath'); //ERRO: NOT A FUNCTION
+require('@cypress/xpath'); //ERRO: NOT A FUNCTION --corrigido npm i
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')

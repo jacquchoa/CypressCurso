@@ -25,8 +25,8 @@
 // Cypress.Commands.overwrite("visit", (originalFn, url, options) => { ... })
 
 Cypress.Commands.add('clickAlert', (locator, message) => {
-    cy.get('locator').click()
+    cy.get(locator).click()
     cy.on('window:alert', msg => {
-        expect(msg).to.be.equal('message')
+        expect(msg).to.be.equal(message)
     })
 })
