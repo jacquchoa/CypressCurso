@@ -18,7 +18,8 @@ describe('Work with alerts', () => {
             expect(msg).to.be.equal('Alert Simples')
      })*/ 
         //ERRO: TypeError: cy.clickAlert is not a function 
-        cy.clickAlert('#alert', 'Alert Simples')
+         cy.clickAlert('#alert', 'Alert Simples')
+
     })
 
     it('Alert com mock', () => {
