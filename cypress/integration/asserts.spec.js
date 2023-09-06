@@ -1,6 +1,7 @@
 ///reference types="cypress"/>
 //const { it } = require("mocha");
 
+//sessão 2 aula 6 - Assertivas 
 //Valores retornam no console da ferramenta do cypress
 
 it ('Equality', () => {
@@ -45,11 +46,11 @@ it('Object Equality', () => {
  it('Arrays', () => {      //ESTE CENARIO NÃO PASSOU 'ReferenceError: excpect is not defined'
      const arr = [1, 2, 3]
 
-     excpect(arr).to.have.members([1, 2, 3])
-  /*   excpect(arr).to.include.members([1, 3])
+    // excpect(arr).to.have.members([1, 2, 3])
+     excpect(arr).to.include.members([1, 3])
      excpect(arr).to.not.be.empty
      excpect(arr).to.be.empty
- */})
+ })
 
 it('Types', () => {
     const num = 1

@@ -2,8 +2,8 @@
 
 ////AJUDA A AGRUPAR TESTES
 
-//aula 5-SKIP - NÃO EXECULTA
-//aula 5-ONLY - EXECULTA somente o indicado
+//seção 2 aula 5-SKIP - NÃO EXECULTA
+//seção 2 aula 5-ONLY - EXECULTA somente o indicado
 
 it ('A external test...', ()=> {
     

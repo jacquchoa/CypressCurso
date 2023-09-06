@@ -1,5 +1,8 @@
 //const { it } = require("mocha");
 
+//seção 2 aula 4 - Promises
+//seção 2 aula 4 - Teste...
+
 it('sem testes, ainda', () => { })
 
 //variavel

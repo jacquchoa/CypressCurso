@@ -1,7 +1,8 @@
 ///<reference types="cypress" />
 
-///Seção 02 Aaula 07
-
+///Seção 02 Aaula 07 - Acessar uma pagina
+///Seção 02 Aaula 08 - Localizar e interagir com o elemento
+///Seção 02 Aaula 09 - Pouse e Debug
 
 describe('Cypress basics', () => {
     it ('Should visit a page and assert title', () => {

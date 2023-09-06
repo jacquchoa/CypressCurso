@@ -1,5 +1,12 @@
 ///<reference types="cypress"/>
 ///Secao 03 Aula 10 - TEXTO
+///Secao 03 aula 11 - LINK
+///Secao 03 aula 12 - Hooks (Before)
+///Sessão 3 aulo 13 - TESTES DE CAMPO TEXTO
+///Sessão 3 aulo 14 - RADIO BUTTON teste
+///sessão 3 aula 15 - Checkbox
+///sessão 3 aula 16 - Combo 
+///sessão 3 aula 17 - Combo Multiplo
 
 ///hoods secao 03 aula 12
 before(() => {
@@ -20,7 +27,6 @@ describe('Work with basic elements',() => {
     cy.get('.facilAchar').should('have.text', 'Cuidado onde clica, muitas armadilhas...')
     })
     
-
     ///Secao 03 aula 11 - LINK
     it('Link', () => {
         //cy.get('a').click()
@@ -40,7 +46,7 @@ describe('Work with basic elements',() => {
       // it('externo', () => {
       //  })
     })    
-                //// TESTES DE CAMPO TEXTO
+    ////sessão 3 aulo 13 - TESTES DE CAMPO TEXTO
     it('TextFields', () => {
         cy.get('#formNome').type('Cypress Test') //escrever no campo nome
         cy.get('#formNome').should('have.value', 'Cypress Test')//acertiva
@@ -62,7 +68,7 @@ describe('Work with basic elements',() => {
         .should('have.value', 'acerto')
     
     })
-                ////RADIO BUTTON teste
+    ////sessão 3 aulo 14 - RADIO BUTTON teste
     it('RadioButton', () => {
         cy.get('#formSexoFem')
             .click()
@@ -72,5 +78,33 @@ describe('Work with basic elements',() => {
 
         cy.get("[name='formSexo']").should('have.length', 2) 
     })
-    
+
+    ///Sessão 3 aula 15 - Checkbox
+    it('Checkbox', () => {
+        cy.get('#formComidaPizza')
+        .click()
+        .should('be.checked')
+
+        cy.get('[name="formComidaFavorita"]').click({multiple: true})
+        cy.get('#formComidaPizza').should('not.be.checked')
+        cy.get('#formComidaVegetariana').should('be.checked')
+    })
+
+    ///sessão 3 aula 16 - Combo
+    it('Combo', () => {
+        cy.get('[data-test=dataEscolaridade]')
+            .select('2o grau completo')
+            .should('have.value', '2graucomp')
+            
+        cy.get('[data-test=dataEscolaridade]')
+            .select('1graucomp')
+            .should('have.value', '1graucomp')
+        })
+
+    ///sessão 3 aula 17 - Combo Multiplo
+    it.only('Combo Multiplo', ()=> {
+        cy.get('[data-testid=dataEsportes]')
+            .select(['natacao', 'Corrida', 'nada'])
+
+    })
 })
